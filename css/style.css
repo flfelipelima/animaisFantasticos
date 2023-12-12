@@ -5,6 +5,8 @@
 
 :root {
   --color-text: #222;
+  --color-title-h2: #e54;
+  --color-details: #fb5;
 }
 
 img {
@@ -27,7 +29,7 @@ body {
 .menu {
   grid-column: 3 / 5;
   margin: 2rem 0;
-  background: #fb5;
+  background: var(--color-details);
 }
 
 .menu ul {
@@ -61,10 +63,87 @@ body {
 }
 
 .titulo {
-  font-family: 'Playfair Display SC', serif;
+  font-family: "Playfair Display SC", serif;
   font-size: 6rem;
   line-height: 1;
   font-weight: 400;
   grid-column: 1 / 4;
 }
 
+.animais h2 {
+  font-size: 1rem;
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  color: var(--color-title-h2);
+}
+
+.animais h2::before {
+  content: "";
+  width: 40px;
+  height: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  background: var(--color-details);
+}
+
+.animais p {
+  font-family: "Helvetica", arial;
+  line-height: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.animais-lista {
+  grid-column: 2;
+  overflow-y: scroll;
+  height: 370px;
+}
+
+.animais-lista::-webkit-scrollbar {
+  width: 18px;
+}
+
+.animais-lista::-webkit-scrollbar-thumb {
+  background: var(--color-details);
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+
+.animais-lista::-webkit-scrollbar-track {
+  background: #faf6ed;
+}
+
+.animais-descricao {
+  grid-column: 3;
+}
+
+.animais-descricao section {
+  margin-bottom: 3rem;
+}
+
+.faq-lista {
+  grid-column: 2 / 4;
+}
+
+.faq-lista dt {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 2rem 0 0.5rem 0;
+  color: var(--color-title-h2);
+}
+
+.faq-lista dt::before {
+  content: "";
+  width: 20px;
+  height: 10px;
+  background: var(--color-details);
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+footer {
+  grid-column: 3;
+}
